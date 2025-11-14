@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Categories — MyRestaurant</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">🍽️ MyRestaurant</a>
+  </nav>
+
+  <div class="container mt-4">
+    <h2>Categories</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4>Starters</h4>
+          <ul id="list-starters"></ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4>Main Course</h4>
+          <ul id="list-mains"></ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4>Desserts</h4>
+          <ul id="list-desserts"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4">
+      <a href="index.html" class="btn btn-secondary">Back to Menu</a>
+    </div>
+  </div>
+
+  <script>
+    // minimal duplicate of menu data for categories page
+    const MENU_MASTER = [
+      /* STARTERS 10 items */
+      {id:1, title:"Tomato Soup", category:"starters", price:150},
+      {id:2, title:"Veg Spring Roll", category:"starters", price:120},
+      {id:3, title:"Garlic Bread", category:"starters", price:90},
+      {id:4, title:"Bruschetta", category:"starters", price:160},
+      {id:5, title:"Paneer Tikka", category:"starters", price:220},
+      {id:6, title:"Chicken Wings", category:"starters", price:240},
+      {id:7, title:"Crispy Nachos", category:"starters", price:180},
+      {id:8, title:"Hara Bhara Kebab", category:"starters", price:170},
+      {id:9, title:"Corn Chaat", category:"starters", price:110},
+      {id:10, title:"Caesar Salad (small)", category:"starters", price:140},
+
+      /* MAINS 12 items */
+      {id:11, title:"Butter Chicken", category:"mains", price:320},
+      {id:12, title:"Paneer Butter Masala", category:"mains", price:290},
+      {id:13, title:"Grilled Chicken", category:"mains", price:350},
+      {id:14, title:"Pasta Alfredo", category:"mains", price:260},
+      {id:15, title:"Margherita Pizza", category:"mains", price:300},
+      {id:16, title:"Pepperoni Pizza", category:"mains", price:360},
+      {id:17, title:"Veg Biryani", category:"mains", price:240},
+      {id:18, title:"Chicken Biryani", category:"mains", price:320},
+      {id:19, title:"Fish Curry", category:"mains", price:340},
+      {id:20, title:"Steak (200g)", category:"mains", price:420},
+      {id:21, title:"Vegan Burger", category:"mains", price:220},
+      {id:22, title:"Schezwan Noodles", category:"mains", price:230},
+
+      /* DESSERTS 8 items */
+      {id:23, title:"Chocolate Lava Cake", category:"desserts", price:180},
+      {id:24, title:"Tiramisu", category:"desserts", price:200},
+      {id:25, title:"Gulab Jamun (2 pcs)", category:"desserts", price:120},
+      {id:26, title:"Rasgulla (2 pcs)", category:"desserts", price:120},
+      {id:27, title:"Ice Cream Sundae", category:"desserts", price:150},
+      {id:28, title:"Cheesecake", category:"desserts", price:220},
+      {id:29, title:"Brownie with Ice Cream", category:"desserts", price:190},
+      {id:30, title:"Falooda", category:"desserts", price:160}
+    ];
+
+    function populate() {
+      const starters = MENU_MASTER.filter(m=>m.category==='starters');
+      const mains = MENU_MASTER.filter(m=>m.category==='mains');
+      const desserts = MENU_MASTER.filter(m=>m.category==='desserts');
+
+      document.getElementById('list-starters').innerHTML = starters.map(x=>`<li>${x.title} — ₹${x.price}</li>`).join('');
+      document.getElementById('list-mains').innerHTML = mains.map(x=>`<li>${x.title} — ₹${x.price}</li>`).join('');
+      document.getElementById('list-desserts').innerHTML = desserts.map(x=>`<li>${x.title} — ₹${x.price}</li>`).join('');
+    }
+    populate();
+  </script>
+</body>
+</html>
