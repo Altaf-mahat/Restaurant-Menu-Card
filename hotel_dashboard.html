@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Hotel Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">🍽️ MyRestaurant — Dashboard</a>
+    <div class="ml-auto">
+      <a class="btn btn-light" href="index.html">Customer View</a>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h2 class="mb-3">Table Orders (1–8)</h2>
+    <div id="tables-grid" class="grid-container"></div>
+    <div class="mt-4">
+      <button id="refresh" class="btn btn-secondary">Refresh</button>
+      <button id="clear-all" class="btn btn-danger">Clear All Orders</button>
+    </div>
+  </div>
+
+  <!-- QR Payment Modal -->
+  <div id="qr-modal" class="qr-modal">
+    <div class="qr-box">
+      <h3>Scan & Pay 💳</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/UPI-QR-code-example.svg" alt="QR Code" />
+      <p>Use any UPI app to complete payment</p>
+      <button id="close-qr" class="btn btn-secondary">Close</button>
+    </div>
+  </div>
+
+  <script src="hotel.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Dashboard</title>
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">🏨 Hotel Order Dashboard</span>
+    <button id="clear-all" class="btn btn-danger">Clear All Orders</button>
+  </nav>
+
+  <div class="container mt-4">
+    <h3 class="text-center text-danger mb-4">Active Table Orders</h3>
+    <div class="row" id="hotel-orders"></div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="qrModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="qrModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content text-center p-3">
+        <h5 class="text-danger mb-2">Scan & Pay</h5>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/89/UPI-QR-code-example.svg"
+          alt="QR Code"
+          class="img-fluid mb-2"
+          style="max-width:300px"
+        />
+        <p class="text-muted">Use any UPI app to complete payment</p>
+        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  <script src="hotel.js"></script>
+</body>
+</html>
