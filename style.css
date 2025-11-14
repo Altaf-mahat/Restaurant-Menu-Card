@@ -1,0 +1,364 @@
+/* ===================== GENERAL ===================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  padding: 0.5rem 1rem;
+  background-color: #ff3b30;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.navbar .form-control {
+  border-radius: 25px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 0.3rem;
+  transition: all 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #ffdede !important;
+}
+
+/* ===================== MENU CARDS ===================== */
+.menu-item .card {
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  background: #fff;
+  position: relative;
+}
+
+.menu-item .card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.menu-item img:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h5 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-body h6 {
+  color: #ff3b30;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+/* ===================== BADGES ===================== */
+.badge-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.badge-starters { background-color: #FF6B6B; }
+.badge-mains { background-color: #FF3B30; }
+.badge-desserts { background-color: #FF8C42; }
+.badge-beverages { background-color: #1DD1A1; }
+
+/* ===================== TABLE SELECT & BUTTON ===================== */
+.card-body .form-select {
+  border-radius: 25px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  border: 1px solid #ddd;
+}
+
+.card-body .order-btn {
+  background: linear-gradient(45deg, #ff3b30, #ff6b6b);
+  color: #fff;
+  border-radius: 25px;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.card-body .order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(255, 59, 48, 0.4);
+}
+
+/* ===================== ORDERS LIST ===================== */
+#orders-list .col-12 {
+  border-radius: 12px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+#orders-list ul {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#orders-list h6 {
+  font-weight: 600;
+  color: #28a745;
+}
+
+/* ===================== DASHBOARD ===================== */
+#hotel-orders .card {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+#hotel-orders .card:hover {
+  transform: translateY(-5px);
+}
+
+#hotel-orders .list-group-item {
+  font-size: 0.9rem;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+#hotel-orders .pay-btn {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+#hotel-orders .pay-btn:hover {
+  background-color: #218838;
+}
+
+#hotel-orders .clear-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+#hotel-orders .clear-btn:hover {
+  background-color: #c82333;
+}
+
+/* ===================== QR MODAL ===================== */
+#qrModal .modal-content {
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* ===================== LOGIN ===================== */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #ff3b30, #ff6f61);
+}
+
+.login-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.login-box h3 {
+  margin-bottom: 1.5rem;
+  color: #ff3b30;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+}
+
+.login-box button {
+  width: 100%;
+  border-radius: 25px;
+  background-color: #ff3b30;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.login-box button:hover {
+  background-color: #e23329;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width: 768px){
+  .navbar .form-control {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .menu-item img {
+    height: 180px;
+  }
+}
+/* Order Cards */
+#orders-list .table-card {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#orders-list .table-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.table-card h5 {
+  color: #ff3b30;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.table-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.table-card .total {
+  color: #28a745;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.table-card hr {
+  border-color: #eee;
+}
+
+/* Clear button */
+.table-card .clear-table-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.table-card .clear-table-btn:hover {
+  background-color: #c82333;
+}
+/* ===================== QR PAYMENT MODAL ===================== */
+.qr-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.qr-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.qr-box img {
+  width: 200px;
+  margin: 1rem 0;
+}
+
+.qr-box button {
+  background: #ff3b30;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.qr-box button:hover {
+  background: #e23329;
+}
+
+/* ===================== DELETE ITEM BUTTON ===================== */
+.delete-item-btn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-left: 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-item-btn:hover {
+  background: #c82333;
+}
